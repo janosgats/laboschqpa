@@ -20,7 +20,7 @@ The contained repositories are:
 6. Have [Skaffold](https://skaffold.dev/) installed
 * #### Steps to repeat every time when you sit down to write some code 
 7. Run `start-dev-env.ps1` to start your environment and see the logs streamed from the services
-8. Skaffold will watch for filesystem changes and update your cluster when something is changing.
+8. Skaffold will watch for filesystem changes and updates your cluster when something is changing.
       * **Java** services: You have to `mvn package` build the code when you want an update since Dockerfiles are using the produced *.jar* file in local dev.
       * **JS** services: The cluster update triggers on changes in almost every file.
 
