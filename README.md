@@ -1,6 +1,6 @@
 # Labosch CST Web
-Labosch CST Web is a microservice based architecture to serve web sites of 50th CST. 
-This repository contains repositories of services in the architecture and is also used as the parent folder for local development. 
+Labosch CST Web is a microservice based simple architecture to serve web sites of 50th CST. 
+This repository contains repositories of services in the architecture and is also used as the parent folder in local development. 
 
 The contained repositories are:
 1. Server (main webservice): https://github.com/janosgats/laboschcst.server
@@ -26,6 +26,6 @@ The contained repositories are:
 
 
 ### Debugging
-Open remote-debug ports for local development:
+Opened remote-debug ports for local development:
 * Server: 30005 *(Java - JDK 9+)*
 * FileHost: 30006 *(Java - JDK 9+)*
