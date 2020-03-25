@@ -4,19 +4,19 @@ build:
   local:
     push: false
   artifacts:
-    - image: gjani/laboschcst-server
-      context: laboschcst.server
+    - image: gjani/laboschqpa-server
+      context: laboschqpa.server
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
-    - image: gjani/laboschcst-filehost
-      context: laboschcst.filehost
+    - image: gjani/laboschqpa-filehost
+      context: laboschqpa.filehost
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
-    - image: szalkaikrisztian/laboschcst-frontend
-      context: laboschcst.frontend
+    - image: szalkaikrisztian/laboschqpa-frontend
+      context: laboschqpa.frontend
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
 deploy:
   kubectl:
    manifests:
-     - laboschcst.k8s/dev/*.yaml
+     - laboschqpa.k8s/dev/*.yaml
