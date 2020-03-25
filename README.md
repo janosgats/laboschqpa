@@ -11,7 +11,7 @@ The contained repositories are:
 ## Development
 
 ### Setting up the environment
-* ####One-time steps
+* #### One-time steps
 1. Clone this repo
 2. Run `clone-downstream-repos.ps1` to clone the above repositories
 3. Place development secrets under `laboschcst.k8s/setting_up_dev_env/<service_name>/secret/`
