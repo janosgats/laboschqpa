@@ -63,7 +63,7 @@ Apply-Config-Surely "Applying miscellaneous cluster specific config" "kubectl ap
 Apply-Config-Surely "Applying Nginx config" "kubectl apply -f laboschqpa.k8s/dev/ingress-nginx"
 
 
-Create-PV-For-Node-Modules
+#Create-PV-For-Node-Modules
 
 EchoHeadline "Applying Persistent Volumes config"
 kubectl apply -f laboschqpa.k8s/setting_up_dev_env/pv
