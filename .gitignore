@@ -1,8 +1,8 @@
-laboschqpa.server
-laboschqpa.filehost
-laboschqpa.frontend
-laboschqpa.k8s
+/laboschqpa.server/
+/laboschqpa.filehost/
+/laboschqpa.frontend/
+/laboschqpa.k8s/
 
-temp
+/temp/
 
 .idea
