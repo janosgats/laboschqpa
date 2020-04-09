@@ -4,7 +4,7 @@ This repository contains repositories of services in the architecture and is als
 
 The contained repositories are:
 1. Server (main webservice): https://github.com/janosgats/laboschqpa.server
-2. FileHost (large-file up/download): https://github.com/janosgats/laboschqpa.filehost
+2. FileHost (large-file up&download): https://github.com/janosgats/laboschqpa.filehost
 3. Frontend (React client): https://github.com/janosgats/laboschqpa.frontend
 4. K8s (Kubernetes config files): https://github.com/janosgats/laboschqpa.k8s
 
