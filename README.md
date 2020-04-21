@@ -11,9 +11,15 @@ The contained repositories are:
 <br>
 
 CI/CD images on Docker Hub:
+
 1. Server: https://hub.docker.com/repository/docker/gjani/laboschqpa-server/tags
+
+   [![Build Status](https://travis-ci.com/janosgats/laboschqpa.server.svg?branch=master)](https://travis-ci.com/janosgats/laboschqpa.server)
+
 2. FileHost: https://hub.docker.com/repository/docker/gjani/laboschqpa-filehost/tags
 
+   [![Build Status](https://travis-ci.com/janosgats/laboschqpa.filehost.svg?branch=master)](https://travis-ci.com/janosgats/laboschqpa.filehost)
+   
 ## Development
 
 ### Setting up the environment
