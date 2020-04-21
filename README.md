@@ -8,6 +8,12 @@ The contained repositories are:
 3. Frontend (React client): https://github.com/janosgats/laboschqpa.frontend
 4. K8s (Kubernetes config files): https://github.com/janosgats/laboschqpa.k8s
 
+<br>
+
+CI/CD images on Docker Hub:
+1. Server: https://hub.docker.com/repository/docker/gjani/laboschqpa-server/tags
+2. FileHost: https://hub.docker.com/repository/docker/gjani/laboschqpa-filehost/tags
+
 ## Development
 
 ### Setting up the environment
