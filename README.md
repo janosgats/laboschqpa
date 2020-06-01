@@ -28,12 +28,13 @@ CI/CD images on Docker Hub:
 2. Run `clone-downstream-repos.ps1` to clone the above repositories
 3. Place development secrets under `laboschqpa.k8s/setting_up_dev_env/<service_name>/secret/`
 4. Edit *.yaml* files in `laboschqpa.k8s/setting_up_dev_env/` to provide PC specific resources for your local k8s cluster (this mostly means setting the `capacity->storage` and `hostPath` of `pv/pv-volume-nfs-server.yaml`)
-5. Build the **Java**-based services by `mvn package` for the first time on your PC
-6. Have a (local) k8s cluster running and *kubectl* configured to use that cluster
-7. Have [Skaffold](https://skaffold.dev/) installed
+5. Open `skaffold.yaml` and comment out the artifacts which you want to be pulled from DockerHub instead of be built on your computer!
+6. Have *kubectl* installed
+7. Have a (local) k8s cluster running and *kubectl* configured to use that cluster
+8. Have [Skaffold](https://skaffold.dev/) installed
 * #### Steps to repeat every time when you sit down to write some code 
-8. Run `start-dev-env.ps1` to start your environment and see the logs streamed from the services
-9. Skaffold will watch for filesystem changes and updates your cluster when something is changing.
+9. Run `start-dev-env.ps1` to start your environment and see the logs streamed from the services
+10. Skaffold will watch for filesystem changes and updates your cluster when something is changing.
       * **Java** services: You have to `mvn package` build the code when you want an update since Dockerfiles are using the produced *.jar* file in local dev.
       * **JS** services: The cluster update triggers on changes in almost every file.
 

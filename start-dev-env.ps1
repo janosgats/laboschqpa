@@ -65,6 +65,8 @@ Apply-Config-Surely "Applying miscellaneous cluster specific config" "kubectl ap
 #forcing Nginx to set up before Skaffold applies config of the particular microservices
 Apply-Config-Surely "Applying Nginx config" "kubectl apply -f laboschqpa.k8s/dev/ingress-nginx"
 
+Apply-Config-Surely "Applying Metrics config" "kubectl apply -f laboschqpa.k8s/dev/metrics"
+
 
 #Create-PV-For-Node-Modules
 
@@ -80,6 +82,14 @@ kubectl apply -f laboschqpa.k8s/setting_up_dev_env/db
 EchoHeadline "Applying dev resources (dev_res)"
 kubectl apply -f laboschqpa.k8s/setting_up_dev_env/dev_res
 
+EchoHeadline "Applying Persistent Volumes Claims"
+kubectl apply -f laboschqpa.k8s/dev/pvc
+
+EchoHeadline "Pulling master images from DockerHub"
+docker pull gjani/laboschqpa-server:master
+docker pull gjani/laboschqpa-filehost:master
+docker pull gjani/laboschqpa-frontentd:master
+
 
 #print the bearer token required for dashboard login
 echo "==========================================================================================================================================================="
@@ -90,4 +100,4 @@ echo "==========================================================================
 
 #starting Skaffold
 EchoHeadline "Starting Skaffold 'dev'"
-Start-Process "skaffold" "dev --cleanup=false" -NoNewWindow -Wait -PassThru
+Start-Process "skaffold" "dev" -NoNewWindow -Wait -PassThru

@@ -4,6 +4,7 @@ build:
   local:
     push: false
   artifacts:
+# If you want an image to be pulled from DockerHub instead of building it locally, comment out the corresponding artifact!
     - image: gjani/laboschqpa-server
       context: laboschqpa.server
       docker:
