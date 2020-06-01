@@ -14,6 +14,7 @@ build:
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
     - image: szalkaikrisztian/laboschqpa-frontend
+      # TODO: Use the sync option to update files without rebuild the image: https://skaffold.dev/docs/pipeline-stages/filesync/
       context: laboschqpa.frontend
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
