@@ -26,7 +26,7 @@ CI/CD images on Docker Hub:
 * #### One-time steps
 1. Clone this repo
 2. Run `clone-downstream-repos.ps1` to clone the above repositories
-3. Place development secrets under `laboschqpa.k8s/setting_up_dev_env/<service_name>/secret/`
+3. Place the development secrets under `laboschqpa.k8s/setting_up_dev_env/<service_name>/secret/`
 4. **!OPTIONAL!** *Do this Only if you want to use the **HostPath** PersistentVolume as storage **for FileHost**:* Open the `laboschqpa.k8s/setting_up_dev_env/nfs-server/nfs-server-pvc.yaml` and the `laboschqpa.k8s/setting_up_dev_env/pv/pv-volume-nfs-server.yaml` files and follow the instructions in them!  
 5. Open `skaffold.yaml` and comment out the artifacts which you want to be pulled from DockerHub instead of be built locally on your computer!
 6. Have *kubectl* installed
