@@ -50,6 +50,8 @@ function Create-PV-For-Node-Modules()
     echo $pvPathInsertedYaml | kubectl apply -f -
 }
 
+$ErrorActionPreference = "Stop"
+
 WriteHeadline "Loading nfsd kernel module (modprobe nfsd)"
 kubectl exec -it -n kube-system $(kubectl get pods -n kube-system | grep kube-proxy | awk '{ print $1 }') modprobe nfsd
 
