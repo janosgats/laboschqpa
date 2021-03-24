@@ -13,8 +13,8 @@ build:
       context: laboschqpa.filehost
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
-    - image: gjani/laboschqpa-frontend
-      context: laboschqpa.frontend
+    - image: gjani/laboschqpa-client
+      context: laboschqpa.client
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
       sync:

@@ -30,25 +30,25 @@ function Get-PSScriptRoot-Path-For-Kubernetes()
     return $kubernetesPath
 }
 
-function Create-PV-For-Node-Modules()
-{
-    WriteHeadline "Creating PV for node_modules"
-    WriteSmallHeadline "Determining path of node_modules directory"
-
-    $nodeModulesPath = Get-PSScriptRoot-Path-For-Kubernetes
-    $nodeModulesPath = $nodeModulesPath + "/laboschqpa.frontend/node_modules"
-
-    $msg = "nodeModulesPath: " + $nodeModulesPath
-    Write-Host $msg
-
-    $pvOriginalYaml = Get-Content -path laboschqpa.k8s/setting_up_dev_env/pv/pv-volume-frontend-nodemodules-for-dev.yaml -Raw
-    $pvPathInsertedYaml = $pvOriginalYaml -replace 'DEV_ENV_FRONTEND_NODE_MODULES_FOLDER_HOST_PATH_PLACEHOLDER', $nodeModulesPath
-
-    #EchoSmallHeadline "Deleting old nodemodules PV"
-    #kubectl delete pv pv-volume-frontend-nodemodules-for-dev
-    WriteSmallHeadline "Applying new nodemodules PV"
-    echo $pvPathInsertedYaml | kubectl apply -f -
-}
+#function Create-PV-For-Node-Modules()
+#{
+#    WriteHeadline "Creating PV for node_modules"
+#    WriteSmallHeadline "Determining path of node_modules directory"
+#
+#    $nodeModulesPath = Get-PSScriptRoot-Path-For-Kubernetes
+#    $nodeModulesPath = $nodeModulesPath + "/laboschqpa.frontend/node_modules"
+#
+#    $msg = "nodeModulesPath: " + $nodeModulesPath
+#    Write-Host $msg
+#
+#    $pvOriginalYaml = Get-Content -path laboschqpa.k8s/setting_up_dev_env/pv/pv-volume-frontend-nodemodules-for-dev.yaml -Raw
+#    $pvPathInsertedYaml = $pvOriginalYaml -replace 'DEV_ENV_FRONTEND_NODE_MODULES_FOLDER_HOST_PATH_PLACEHOLDER', $nodeModulesPath
+#
+#    #EchoSmallHeadline "Deleting old nodemodules PV"
+#    #kubectl delete pv pv-volume-frontend-nodemodules-for-dev
+#    WriteSmallHeadline "Applying new nodemodules PV"
+#    echo $pvPathInsertedYaml | kubectl apply -f -
+#}
 
 $ErrorActionPreference = "Stop"
 
@@ -90,7 +90,7 @@ kubectl apply -f laboschqpa.k8s/dev/pvc
 WriteHeadline "Pulling master images from DockerHub"
 docker pull gjani/laboschqpa-server:master
 docker pull gjani/laboschqpa-filehost:master
-docker pull gjani/laboschqpa-frontentd:master
+docker pull gjani/laboschqpa-client:master
 
 
 #print the bearer token required for dashboard login
