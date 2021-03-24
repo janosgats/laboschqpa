@@ -5,7 +5,7 @@ This repository contains repositories of services in the architecture and is als
 The contained repositories are:
 1. Server (main webservice): https://github.com/janosgats/laboschqpa.server
 2. FileHost (authed large-file up&download): https://github.com/janosgats/laboschqpa.filehost
-3. Frontend (Angular client): https://github.com/Krauszzsolt/laboschqpa.frontend
+3. Client (React + NextJS frontend): https://github.com/janosgats/laboschqpa.client
 4. K8s (Kubernetes config files): https://github.com/janosgats/laboschqpa.k8s
 
 <br>
@@ -20,9 +20,9 @@ CI/CD images on Docker Hub:
 
    * [![Build Status](https://travis-ci.com/janosgats/laboschqpa.filehost.svg?branch=master)](https://travis-ci.com/github/janosgats/laboschqpa.filehost)
 
-3. Frontend: https://hub.docker.com/repository/docker/gjani/laboschqpa-frontend/tags
+3. Client: https://hub.docker.com/repository/docker/gjani/laboschqpa-client/tags
 
-   * [![Build Status](https://travis-ci.com/Krauszzsolt/laboschqpa.frontend.svg?branch=master)](https://travis-ci.com/github/Krauszzsolt/laboschqpa.frontend)
+   * [![Build Status](https://travis-ci.com/janosgats/laboschqpa.client.svg?branch=master)](https://travis-ci.com/github/janosgats/laboschqpa.client)
    
 ## Development
 
