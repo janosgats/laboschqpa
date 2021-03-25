@@ -5,7 +5,7 @@ git clone https://github.com/janosgats/laboschqpa.server.git
 git clone https://github.com/janosgats/laboschqpa.filehost.git
 
 #frontend code 
-git clone https://github.com/Krauszzsolt/laboschqpa.client.git
+git clone https://github.com/janosgats/laboschqpa.client.git
 
 #k8s config files
 git clone https://github.com/janosgats/laboschqpa.k8s.git
