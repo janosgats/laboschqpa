@@ -19,7 +19,8 @@ build:
         dockerfile: docker/Dockerfile-k8s_dev
       sync:
         infer:
-          - "**/*"
+          - "src/**/*"
+          - "public/**/*"
 deploy:
   kubectl:
    manifests:
