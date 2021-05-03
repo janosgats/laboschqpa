@@ -62,12 +62,12 @@ kubectl delete secret laboschqpa-filehost-secrets
 kubectl create secret generic laboschqpa-server-secrets --from-file=secrets.properties=laboschqpa.k8s/setting_up_dev_env/server/secret/secrets-k8s_dev.properties
 kubectl create secret generic laboschqpa-filehost-secrets --from-file=secrets.properties=laboschqpa.k8s/setting_up_dev_env/filehost/secret/secrets-k8s_dev.properties
 
-Apply-Config-Surely "Applying miscellaneous cluster specific config" "kubectl apply -f ${PWD}/laboschqpa.k8s/setting_up_dev_env"
+#Apply-Config-Surely "Applying miscellaneous cluster specific config" "kubectl apply -f ${PWD}/laboschqpa.k8s/setting_up_dev_env"
 
 #forcing Nginx to set up before Skaffold applies config of the particular microservices
 Apply-Config-Surely "Applying Nginx config" "kubectl apply -f laboschqpa.k8s/dev/ingress-nginx"
 
-Apply-Config-Surely "Applying Metrics config" "kubectl apply -f laboschqpa.k8s/dev/metrics"
+#Apply-Config-Surely "Applying Metrics config" "kubectl apply -f laboschqpa.k8s/dev/metrics"
 
 
 #Create-PV-For-Node-Modules
@@ -84,7 +84,7 @@ kubectl apply -f laboschqpa.k8s/setting_up_dev_env/db
 WriteHeadline "Applying dev resources (dev_res)"
 kubectl apply -f laboschqpa.k8s/setting_up_dev_env/dev_res
 
-WriteHeadline "Applying Persistent Volumes Claims"
+WriteHeadline "Applying Persistent Volume Claims"
 kubectl apply -f laboschqpa.k8s/dev/pvc
 
 WriteHeadline "Pulling master images from DockerHub"

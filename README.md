@@ -44,6 +44,16 @@ CI/CD images on Docker Hub:
 
 
 ### Debugging
-Opened remote-debug ports for local development:
+Open remote-debug ports for local development:
 * Server: 30005 *(Java - JDK 9+)*
 * FileHost: 30006 *(Java - JDK 9+)*
+* Client: 30229 *(NodeJS - inspect)*
+
+### Info
+* Hosting: GKE (Google Kubernetes Engine on GCP)
+* FileHost S3:
+  * Provider: ScaleWay
+  * bucket
+    * dev: "laboschqpa-dev"
+    * production: "laboschqpa"
+* CI/CD: Travis-CI
