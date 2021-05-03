@@ -39,7 +39,7 @@ CI/CD images on Docker Hub:
 * #### Steps to repeat every time when you sit down to write some code 
 9. Run `start-dev-env.ps1` to start your environment and see the logs streamed from the services
 10. Skaffold will watch for filesystem changes and updates your cluster when something is changing.
-      * **Java** services: You have to `mvn package` build the code when you want an update since Dockerfiles are using the produced *.jar* file in local dev.
+      * **Java** services: You have to `gradle bootJar` build the code when you want an update since Dockerfiles are using the produced *.jar* file in local dev.
       * **JS** services: The cluster update triggers on changes in almost every file.
 
 
