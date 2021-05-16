@@ -1,12 +1,13 @@
 # Labosch Qpa Web
-Labosch Qpa Web is a microservice based simple architecture to serve web sites of 50th Qpa & CST. 
+Labosch Qpa Web is a microservice based simple architecture to serve web sites of 50th Qpa. 
 This repository contains repositories of services in the architecture and is also used as the parent folder in local development. 
 
 The contained repositories are:
 1. Server (main webservice): https://github.com/janosgats/laboschqpa.server
-2. FileHost (authed large-file up&download): https://github.com/janosgats/laboschqpa.filehost
-3. Client (React + NextJS frontend): https://github.com/janosgats/laboschqpa.client
-4. K8s (Kubernetes config files): https://github.com/janosgats/laboschqpa.k8s
+2. FileHost (authed file up&download): https://github.com/janosgats/laboschqpa.filehost
+3. ImageConverter (image transcoding job processor): https://github.com/janosgats/laboschqpa.imageconverter
+4. Client (React + NextJS frontend): https://github.com/janosgats/laboschqpa.client
+5. K8s (Kubernetes config files): https://github.com/janosgats/laboschqpa.k8s
 
 <br>
 
@@ -20,7 +21,11 @@ CI/CD images on Docker Hub:
 
    * [![Build Status](https://travis-ci.com/janosgats/laboschqpa.filehost.svg?branch=master)](https://travis-ci.com/github/janosgats/laboschqpa.filehost)
 
-3. Client: https://hub.docker.com/repository/docker/gjani/laboschqpa-client/tags
+3. ImageConverter: https://hub.docker.com/repository/docker/gjani/laboschqpa-imageconverter/tags
+
+   * [![Build Status](https://travis-ci.com/janosgats/laboschqpa.imageconverter.svg?branch=master)](https://travis-ci.com/github/janosgats/laboschqpa.imageconverter)
+
+4. Client: https://hub.docker.com/repository/docker/gjani/laboschqpa-client/tags
 
    * [![Build Status](https://travis-ci.com/janosgats/laboschqpa.client.svg?branch=master)](https://travis-ci.com/github/janosgats/laboschqpa.client)
    
@@ -47,6 +52,7 @@ CI/CD images on Docker Hub:
 Open remote-debug ports for local development:
 * Server: 30005 *(Java - JDK 9+)*
 * FileHost: 30006 *(Java - JDK 9+)*
+* ImageConverter: 30007 *(Java - JDK 9+)*
 * Client: 30229 *(NodeJS - inspect)*
 
 ### Info

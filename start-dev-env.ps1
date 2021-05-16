@@ -59,8 +59,10 @@ kubectl exec -it -n kube-system $(kubectl get pods -n kube-system | grep kube-pr
 WriteHeadline "Managing Secrets"
 kubectl delete secret laboschqpa-server-secrets
 kubectl delete secret laboschqpa-filehost-secrets
+kubectl delete secret laboschqpa-imageconverter-secrets
 kubectl create secret generic laboschqpa-server-secrets --from-file=secrets.properties=laboschqpa.k8s/setting_up_dev_env/server/secret/secrets-k8s_dev.properties
 kubectl create secret generic laboschqpa-filehost-secrets --from-file=secrets.properties=laboschqpa.k8s/setting_up_dev_env/filehost/secret/secrets-k8s_dev.properties
+kubectl create secret generic laboschqpa-imageconverter-secrets --from-file=secrets.properties=laboschqpa.k8s/setting_up_dev_env/imageconverter/secret/secrets-k8s_dev.properties
 
 #Apply-Config-Surely "Applying miscellaneous cluster specific config" "kubectl apply -f ${PWD}/laboschqpa.k8s/setting_up_dev_env"
 
@@ -83,6 +85,9 @@ kubectl apply -f laboschqpa.k8s/setting_up_dev_env/db
 
 WriteHeadline "Applying dev resources (dev_res)"
 kubectl apply -f laboschqpa.k8s/setting_up_dev_env/dev_res
+
+WriteHeadline "Applying Thumbor config"
+kubectl apply -f laboschqpa.k8s/dev/thumbor
 
 WriteHeadline "Applying Persistent Volume Claims"
 kubectl apply -f laboschqpa.k8s/dev/pvc

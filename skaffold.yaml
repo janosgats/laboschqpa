@@ -13,6 +13,10 @@ build:
       context: laboschqpa.filehost
       docker:
         dockerfile: docker/Dockerfile-k8s_dev
+    - image: gjani/laboschqpa-imageconverter
+      context: laboschqpa.imageconverter
+      docker:
+        dockerfile: docker/Dockerfile-k8s_dev
     - image: gjani/laboschqpa-client
       context: laboschqpa.client
       docker:
