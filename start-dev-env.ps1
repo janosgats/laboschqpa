@@ -95,6 +95,7 @@ kubectl apply -f laboschqpa.k8s/dev/pvc
 WriteHeadline "Pulling master images from DockerHub"
 docker pull gjani/laboschqpa-server:master
 docker pull gjani/laboschqpa-filehost:master
+docker pull gjani/laboschqpa-imageconverter:master
 docker pull gjani/laboschqpa-client:master
 
 
