@@ -52,8 +52,8 @@ function Get-PSScriptRoot-Path-For-Kubernetes()
 
 $ErrorActionPreference = "Stop"
 
-WriteHeadline "Loading nfsd kernel module (modprobe nfsd)"
-kubectl exec -it -n kube-system $(kubectl get pods -n kube-system | grep kube-proxy | awk '{ print $1 }') modprobe nfsd
+#WriteHeadline "Loading nfsd kernel module (modprobe nfsd)"
+#kubectl exec -it -n kube-system $(kubectl get pods -n kube-system | grep kube-proxy | awk '{ print $1 }') modprobe nfsd
 
 #secrets
 WriteHeadline "Managing Secrets"
