@@ -52,6 +52,12 @@ function Get-PSScriptRoot-Path-For-Kubernetes()
 
 $ErrorActionPreference = "Stop"
 
+$currentContextName = kubectl config current-context
+if($currentContextName -ne "docker-desktop"){
+    echo "You probably don't want to develop on this context: ${currentContextName}. Exiting..."
+    exit
+}
+
 #WriteHeadline "Loading nfsd kernel module (modprobe nfsd)"
 #kubectl exec -it -n kube-system $(kubectl get pods -n kube-system | grep kube-proxy | awk '{ print $1 }') modprobe nfsd
 
