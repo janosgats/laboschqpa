@@ -1,5 +1,5 @@
 # Labosch Qpa Web
-Labosch Qpa Web is a microservice based simple architecture to serve web sites of 50th Qpa. 
+Labosch Qpa Web is a microservice based simple architecture to serve web sites of 49th Qpa. 
 This repository contains repositories of services in the architecture and is also used as the parent folder in local development. 
 
 The contained repositories are:
