@@ -56,10 +56,11 @@ Open remote-debug ports for local development:
 * Client: 30229 *(NodeJS - inspect)*
 
 ### Info
-* Hosting: GKE (Google Kubernetes Engine on GCP)
+* Service hosting: GKE (Google Kubernetes Engine on GCP)
+* SMTP: KSZK
 * FileHost S3:
   * Provider: ScaleWay
   * bucket
     * dev: "laboschqpa-dev"
     * production: "laboschqpa"
-* CI/CD: Travis-CI
+* CI/CD: Jenkins
